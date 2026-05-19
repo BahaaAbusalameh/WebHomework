@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #0e13a270;
+        }
+        .logo{
+            color : white;
+            font-size: 30px;
+            font-weight: bold;
+    
+        }
+        .logo img{
+            width: 100px;
+            height: 70px;
+        }
+        nav ul{
+            list-style: none;
+            gap : 20px;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a{
+            text-decoration:  none;
+            color: white;
+            font-size: 20px;
+        }
+        nav ul li a:hover{
+            color : #0e13a2;
+        }
+             .gallery{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            padding: 20px;
+        }
+        .card{
+            background-color: #0e13a270;
+            color : white;
+            padding: 40px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .card:first-child{
+            grid-column: span 2;
+        }
+        .card img{
+            width: 100%;
+            height: auto;
+        }
+
+        @media(max-width: 768px){
+            .gallery{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media(max-width: 480px)
+        {
+            .nav{
+                flex-direction:  column ;
+                align-items: center;
+            }
+            .gallery{
+                grid-template-columns: 1fr;
+            }
+            .card:first-child{
+                grid-column: span 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+   <nav>
+    <div class="logo"><img src="/BahaaLogo.png" alt=""></div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+   </nav>
+   <div class="gallery">
+    <div class="card"><img src="https://picsum.photos/400/200" alt=""></div>
+    <div class="card"><img src="https://picsum.photos/300/200" alt=""></div>
+    <div class="card"><img src="https://picsum.photos/300/201" alt=""></div>
+    <div class="card"><img src="https://picsum.photos/300/202" alt=""></div>
+    <div class="card"><img src="https://picsum.photos/300/203" alt=""></div>
+    <div class="card"><img src="https://picsum.photos/300/204" alt=""></div>
+    </div>
+
+   
+</body>
+</html>
